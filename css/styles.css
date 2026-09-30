@@ -1162,7 +1162,49 @@ img {
     }
 }
 
-/* Preferencia de movimiento reducido */
+/* ===================================
+   INTERESES - FUTUROS
+   =================================== */
+.interest-future {
+    border-color: rgba(99, 102, 241, 0.25);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.04), rgba(6, 182, 212, 0.04));
+    position: relative;
+}
+
+.interest-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--gradient-primary);
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* ===================================
+   HABILIDADES - APRENDIENDO
+   =================================== */
+.skill-card .skill-category {
+    color: var(--text-muted);
+}
+
+/* Categoría "Aprendiendo" en color diferente */
+.skill-card:has(.skill-category:contains("Aprendiendo")) .skill-category {
+    color: var(--accent);
+}
+
+/* Fallback compatible con todos los navegadores */
+.skill-card[data-learning] .skill-category {
+    color: var(--accent);
+    font-style: italic;
+}
+
+/* ===================================
+   PREFERENCIA DE MOVIMIENTO REDUCIDO
+   =================================== */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
